@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tienda de material de oficina</title>
+  <!-- El alumno escribe sus selectores en estilos.css -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header>
+    <h1>Tienda de material de oficina</h1>
+    <p>Consulta nuestro catálogo y aprovecha las ofertas de la semana.</p>
+    <nav>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://example.com">Envíos</a>
+    </nav>
+  </header>
+
+  <main id="catalogo">
+    <h2>Productos</h2>
+
+    <section>
+      <!-- Producto destacado: único elemento con id -->
+      <article id="oferta-destacada">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Crect width='120' height='80' fill='%23cfd8dc'/%3E%3C/svg%3E" alt="Cuaderno A5 de tapa dura">
+        <h3>Cuaderno A5 de tapa dura</h3>
+        <p>Cien hojas de papel reciclado con cuadrícula de 5 mm.</p>
+        <p>Precio: 4,50 €</p>
+        <a href="#">Ver detalles</a>
+      </article>
+
+      <article>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Crect width='120' height='80' fill='%23c5e1a5'/%3E%3C/svg%3E" alt="Pack de 10 bolígrafos azules">
+        <h3>Pack de 10 bolígrafos</h3>
+        <p>Tinta azul de secado rápido y punta media.</p>
+        <p>Precio: 3,20 €</p>
+        <a href="#">Ver detalles</a>
+      </article>
+
+      <article class="agotado">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Crect width='120' height='80' fill='%23ffe0b2'/%3E%3C/svg%3E" alt="">
+        <h3>Archivador de palanca</h3>
+        <p>Lomo ancho, formato folio. Temporalmente sin stock.</p>
+        <p>Precio: 5,90 €</p>
+        <a href="#">Avisarme cuando llegue</a>
+      </article>
+
+      <article>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Crect width='120' height='80' fill='%23b3e5fc'/%3E%3C/svg%3E" alt="">
+        <h3>Grapadora de sobremesa</h3>
+        <p>Capacidad para 25 hojas, incluye 1000 grapas.</p>
+        <p>Precio: 7,80 €</p>
+        <a href="#">Ver detalles</a>
+      </article>
+
+      <article class="agotado">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Crect width='120' height='80' fill='%23f8bbd0'/%3E%3C/svg%3E" alt="Set de marcadores fluorescentes">
+        <h3>Set de marcadores</h3>
+        <p>Seis colores fluorescentes. Agotado hasta nueva reposición.</p>
+        <p>Precio: 6,40 €</p>
+        <a href="#">Avisarme cuando llegue</a>
+      </article>
+    </section>
+
+    <!-- Este párrafo NO está dentro de un article: no debe ponerse en cursiva -->
+    <p>Los precios incluyen IVA. Los productos agotados se reponen cada quince días.</p>
+  </main>
+
+  <footer id="contacto">
+    <h3>Contacto</h3>
+    <p>Escríbenos a <a href="mailto:tienda@example.com">tienda@example.com</a>.</p>
+  </footer>
+
+</body>
+</html>

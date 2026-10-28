@@ -1,0 +1,12 @@
+body{
+    background-color:blueviolet;
+}
+h3{
+    font-weight: bold;
+}
+.agotado{
+    background-color: grey;
+}
+#oferta-destacada{
+    color: red;
+}

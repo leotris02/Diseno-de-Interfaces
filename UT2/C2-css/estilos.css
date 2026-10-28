@@ -1,0 +1,20 @@
+
+h3
+{
+    font-weight: bold;
+}
+.agotado{
+    background-color: grey;
+}
+#oferta-destacada{
+    color: green;
+}
+article > p{
+    font-style: italic;
+}
+a:hover{
+    color: red;
+}
+img[alt=""]{
+    border: 4px solid red;
+}

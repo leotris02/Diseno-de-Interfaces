@@ -1,0 +1,22 @@
+body {
+    background-color: #fff4dc !important; /*aqui le pongo el important pq quiero que este sea el color de fondo */
+    color: #362d20;
+    
+}
+
+body {
+    background-color: #dc2306; /* aunue cambie aca el color del fondo, no se vera pq en la linea 2 le puse el important */
+}
+
+h1 {
+    color: #7a2e19;
+}
+
+h2 {
+    color: #425b3b;
+}
+
+.destacado {
+    background-color: #b68809;
+    padding: 12px;
+}

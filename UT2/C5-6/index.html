@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6 - Posicionamiento</title>
+    <link rel="stylesheet" href="estilos.css">  
+
+
+    <style>
+       
+    </style>
+</head>
+    <body>
+        <header>Ejercicio 6 · Práctica de posicionamiento</header>
+
+        <div class="contenedor">
+            <aside>
+                <strong>Menú lateral</strong>
+                <br>
+                <a href="#producto">Productos</a>
+                <br>
+                <a href="#capas">Carrito</a>
+            </aside>
+
+            <main>
+                <h1>Posicionamiento CSS</h1>
+                <p>Ejemplo sencillo de fixed, sticky, absolute y z-index.</p>
+
+                <section id="producto">
+                    <h2>Tarjeta de producto</h2>
+                    <div class="producto">
+                        <span class="etiqueta">Nuevo</span>
+                        <h3>Pelotas de tenis</h3>
+                        </h3>
+                        <p>Precio: 15 €</p>
+                    </div>
+                </section>
+
+                <section id="capas">
+                    <h2>Cajas superpuestas</h2>
+                    <div class="cajas">
+                        <div class="caja roja">Caja roja</div>
+                        <div class="caja azul">Caja azul</div>
+                    </div>
+
+                    <p>La caja azul queda encima porque tiene un z-index mayor.</p>
+                </section>
+
+                <div class="relleno">
+                    <h2>Para prueba el scroll </h2>
+                    <p>El encabezado permanece arriba y el menú lateral se mantiene visible mientras bajas.</p>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

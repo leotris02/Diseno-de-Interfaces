@@ -1,0 +1,53 @@
+ *, *::before, *::after { 
+    box-sizing: border-box;
+ }
+body { 
+    margin: 0; 
+    padding-top: 70px;
+    background: rgb(101, 103, 124);
+    }
+header { 
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%; padding: 20px;
+    color: white;
+    background: #333;
+    }
+.contenedor {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px; }
+aside { position: sticky;
+    top: 70px;
+    padding: 10px; 
+    background: #ccc;
+ }
+.producto {
+    position: relative;
+    padding: 20px; 
+    background: white; 
+    }
+.etiqueta { 
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    background: red;
+ }
+.cajas { 
+    position: relative; height: 150px;
+ }
+.caja { 
+    position: absolute; width: 120px; height: 100px; padding: 10px; color: white;
+ }
+.roja {
+     background: red; z-index: 1;
+     }
+.azul {
+     top: 30px; left: 60px; background: blue; z-index: 1;
+     }
+.relleno { 
+    height: 500px; 
+}

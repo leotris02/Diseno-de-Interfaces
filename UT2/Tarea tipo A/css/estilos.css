@@ -15,7 +15,6 @@ h1, h2 {
   font-family: 'Montserrat', Arial, sans-serif;
 }
 
-/* Cabecera fija arriba (Requisito de posicionamiento) */
 .cabecera {
   position: fixed;
   top: 0;
@@ -28,7 +27,6 @@ h1, h2 {
   padding-top: 25px;
 }
 
-/* Menu lateral a la izquierda como en el boceto */
 .menu-lateral {
   float: left;
   width: 20%;
@@ -37,7 +35,6 @@ h1, h2 {
   padding: 20px 10px;
 }
 
-/* Selector descendiente */
 .menu-lateral ul {
   list-style: none;
 }
@@ -46,7 +43,6 @@ h1, h2 {
   margin-bottom: 15px;
 }
 
-/* Selector de tipo con clase */
 a.enlace-menu {
   display: block;
   background-color: #F4F6F9;
@@ -57,13 +53,11 @@ a.enlace-menu {
   border: 1px solid #00B4D8;
 }
 
-/* Pseudo-clase hover */
 a.enlace-menu:hover {
   background-color: #BFFF00;
   color: #0A192F;
 }
 
-/* Zona derecha principal */
 .contenido-principal {
   float: left;
   width: 80%;
@@ -89,121 +83,6 @@ a.enlace-menu:hover {
   font-size: 14px;
 }
 
-/* Las 4 tarjetas de pistas en fila */
-.contenedor-pistas {
-  width: 100%;
-}
-
-article.tarjeta-pista {
-  float: left;
-  width: 23%;
-  margin-right: 2%;
-  background-color: #00B4D8;
-  padding: 20px 15px;
-  text-align: center;
-  min-height: 360px;
-}
-
-.hueco-foto {
-  background-color: #0A192F;
-  color: #F4F6F9;
-  height: 150px;
-  padding-top: 60px;
-  margin-bottom: 20px;
-}
-
-.info-pista {* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Open Sans', Arial, sans-serif;
-  background-color: #F4F6F9;
-  color: #1E1E1E;
-  padding-top: 90px;
-}
-
-h1, h2 {
-  font-family: 'Montserrat', Arial, sans-serif;
-}
-
-/* Cabecera fija arriba (Requisito de posicionamiento) */
-.cabecera {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  background-color: #0A192F;
-  color: #F4F6F9;
-  text-align: center;
-  padding-top: 25px;
-}
-
-/* Menu lateral a la izquierda como en el boceto */
-.menu-lateral {
-  float: left;
-  width: 20%;
-  min-height: 600px;
-  background-color: #0A192F;
-  padding: 20px 10px;
-}
-
-/* Selector descendiente */
-.menu-lateral ul {
-  list-style: none;
-}
-
-.menu-lateral li {
-  margin-bottom: 15px;
-}
-
-/* Selector de tipo con clase */
-a.enlace-menu {
-  display: block;
-  background-color: #F4F6F9;
-  color: #1E1E1E;
-  text-decoration: none;
-  text-align: center;
-  padding: 15px 10px;
-  border: 1px solid #00B4D8;
-}
-
-/* Pseudo-clase hover */
-a.enlace-menu:hover {
-  background-color: #BFFF00;
-  color: #0A192F;
-}
-
-/* Zona derecha principal */
-.contenido-principal {
-  float: left;
-  width: 80%;
-  padding: 30px;
-}
-
-.cabecera-reserva {
-  margin-bottom: 25px;
-}
-
-.cabecera-reserva h2 {
-  display: inline-block;
-  font-size: 32px;
-  color: #0A192F;
-}
-
-.aviso-disponible {
-  float: right;
-  background-color: #0A192F;
-  color: #F4F6F9;
-  padding: 10px 15px;
-  border-radius: 10px;
-  font-size: 14px;
-}
-
-/* Las 4 tarjetas de pistas en fila */
 .contenedor-pistas {
   width: 100%;
 }
@@ -247,7 +126,6 @@ button.boton-reservar:hover {
   color: #BFFF00;
 }
 
-/* Los 5 puntos de abajo del boceto */
 .puntos-carrusel {
   clear: both;
   text-align: center;
@@ -260,48 +138,6 @@ button.boton-reservar:hover {
   margin: 0 5px;
 }
 
-/* Pie de pagina */
-.pie {
-  clear: both;
-  background-color: #1E1E1E;
-  color: #F4F6F9;
-  text-align: center;
-  padding: 15px;
-}
-  color: #0A192F;
-  margin-bottom: 50px;
-  font-weight: bold;
-}
-
-button.boton-reservar {
-  font-family: 'Montserrat', Arial, sans-serif;
-  background-color: #BFFF00;
-  color: #0A192F;
-  border: 1px solid #0A192F;
-  border-radius: 10px;
-  padding: 12px 25px;
-  cursor: pointer;
-}
-
-button.boton-reservar:hover {
-  background-color: #0A192F;
-  color: #BFFF00;
-}
-
-/* Los 5 puntos de abajo del boceto */
-.puntos-carrusel {
-  clear: both;
-  text-align: center;
-  padding-top: 25px;
-}
-
-.punto {
-  font-size: 20px;
-  color: #0A192F;
-  margin: 0 5px;
-}
-
-/* Pie de pagina */
 .pie {
   clear: both;
   background-color: #1E1E1E;

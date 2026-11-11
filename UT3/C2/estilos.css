@@ -1,0 +1,38 @@
+.mi-header {
+  /*  Aplico display flex */
+  display: flex;
+  
+  /* Separo logo y navegación a los extremos */
+  justify-content: space-between;
+  
+  /* Lo centro todo verticalmente sin usar padding */
+  align-items: center;
+}
+/* Ajusto un poco el logo q  no se vea tan grande */
+.img-logo {
+  width: 80px;
+  height: 80px;
+}
+/* Contenedor Flex con wrap y gap */
+.contenedor-productos {
+  display: flex;
+  flex-wrap: wrap;       /* Hace que las tarjetas bajen de línea si no caben */
+  gap: 20px;             /* Espacio de separación entre las tarjetas */
+  padding: 30px;
+}
+
+/* Estilo para que las 12 tarjetas sean iguales */
+.tarjeta-producto {
+  width: 200px;
+  height: 260px;
+  background-color: red;
+  border: 1px solid white;
+  border-radius: 8px;
+  
+  /* para poner el texto en el centro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: bold;
+}

@@ -1,0 +1,68 @@
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-areas: 
+    "cabecera cabecera"
+    "lateral contenido"
+    "pie pie";
+  min-height: 100vh;/* lo puse para q ocupara toda la pantalla y se vea mejor */
+}
+
+.mi-header {
+  grid-area: cabecera;
+  
+  /*  Aplico display flex */
+  display: flex;
+  
+  /* Separo logo y navegación a los extremos */
+  justify-content: space-between;
+  
+  /* Lo centro todo verticalmente sin usar padding */
+  align-items: center;
+}
+
+/* Ajusto un poco el logo q  no se vea tan grande */
+.img-logo {
+  width: 80px;
+  height: 80px;
+}
+
+.barra-lateral {
+  grid-area: lateral;
+  background-color: #f4f4f4;
+  padding: 30px;
+}
+
+.contenedor-productos {
+  grid-area: contenido;
+  
+  /* Contenedor Flex con wrap y gap */
+  display: flex;
+  flex-wrap: wrap;       /* Hace que las tarjetas bajen de línea si no caben */
+  gap: 20px;             /* Espacio de separación entre las tarjetas */
+  padding: 30px;
+}
+
+/* Estilo para que las 12 tarjetas sean iguales */
+.tarjeta-producto {
+  width: 200px;
+  height: 260px;
+  background-color: red;
+  border: 1px solid white;
+  border-radius: 8px;
+  
+  /* para poner el texto en el centro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.mi-pie {
+  grid-area: pie;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}

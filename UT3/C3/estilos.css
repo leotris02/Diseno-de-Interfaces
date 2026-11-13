@@ -10,15 +10,14 @@
 
 .mi-header {
   grid-area: cabecera;
-  
-  /*  Aplico display flex */
-  display: flex;
-  
-  /* Separo logo y navegación a los extremos */
-  justify-content: space-between;
-  
-  /* Lo centro todo verticalmente sin usar padding */
+
+  display: grid;
+  grid-template-columns: 80px 1fr;
   align-items: center;
+}
+
+.mi-header h2 {
+  justify-self: end;
 }
 
 /* Ajusto un poco el logo q  no se vea tan grande */
@@ -35,11 +34,10 @@
 
 .contenedor-productos {
   grid-area: contenido;
-  
-  /* Contenedor Flex con wrap y gap */
-  display: flex;
-  flex-wrap: wrap;       /* Hace que las tarjetas bajen de línea si no caben */
-  gap: 20px;             /* Espacio de separación entre las tarjetas */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 20px;
   padding: 30px;
 }
 
@@ -51,10 +49,8 @@
   border: 1px solid white;
   border-radius: 8px;
   
-  /* para poner el texto en el centro */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   font-family: sans-serif;
   font-weight: bold;
 }

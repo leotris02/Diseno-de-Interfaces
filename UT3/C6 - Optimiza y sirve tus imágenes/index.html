@@ -20,16 +20,21 @@
          sizes="(max-width: 976px) calc(100vw - 16px), 960px"
          width="960" height="721"
          style="max-width: 100%; height: auto;"
-         alt="Red negra que divide una pista de pádel"
+         alt="Red negra que divide una pista de pádel azul "
          loading="lazy">
-    <h2>Prueba en DevTools</h2>
-    <ol>
-      <li>Abre esta página con Live Server y pulsa F12.</li>
-      <li>En Network, marca Disable cache y selecciona el filtro Img.</li>
-      <li>Activa la vista adaptable (Ctrl + Mayús + M). Configura el DPR en 1 si está disponible.</li>
-      <li>Prueba con 390 px y con 1280 px de ancho. Recarga la página en cada tamaño
-        y revisa el nombre del archivo WebP que aparece en Network.</li>
-    </ol>
+    <h2>Comprobación en DevTools</h2>
+    <p>Al principio se cargaba la imagen de 960 px en los dos tamaños de pantalla.
+      Cambié el DPR a 1 y recargué la página en cada ancho. En la pestaña Red comprobé
+      que a 390 px se cargó <code>pista-480.webp</code> y a 1280 px se cargó
+      <code>pista-960.webp</code>.</p>
+
+    <p>Prueba a 390 px de ancho.</p>
+    <img src="imagenes/captura-390.png" alt="a390 px "
+         style="max-width: 100%; height: auto;">
+
+    <p>Prueba a 1280 px de ancho.</p>
+    <img src="imagenes/captura-1280.png" alt="a 1280 px "
+         style="max-width: 100%; height: auto;">
   </main>
 </body>
 </html>

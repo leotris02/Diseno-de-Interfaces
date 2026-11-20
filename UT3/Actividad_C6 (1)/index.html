@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C6 - Optimiza y sirve tus imágenes</title>
+</head>
+<body>
+  <main>
+    <h1>C6 - Optimiza y sirve tus imágenes</h1>
+    <p>Comprimí una foto de la actividad C5 con Pillow y la guardé en WebP en dos tamaños.</p>
+    <ul>
+      <li>JPEG original (1600 px de ancho): 364.524 bytes.</li>
+      <li>WebP de 960 px: 52.896 bytes. Ahorro: 85,49 %.</li>
+      <li>WebP de 480 px: 16.966 bytes. Ahorro: 95,35 %.</li>
+    </ul>
+
+    <img src="imagenes/pista-960.webp"
+         srcset="imagenes/pista-480.webp 480w, imagenes/pista-960.webp 960w"
+         sizes="(max-width: 976px) calc(100vw - 16px), 960px"
+         width="960" height="721"
+         style="max-width: 100%; height: auto;"
+         alt="Red negra que divide una pista de pádel azul "
+         loading="lazy">
+    <h2>Comprobación en DevTools</h2>
+    <p>Al principio se cargaba la imagen de 960 px en los dos tamaños de pantalla.
+      Cambié el DPR a 1 y recargué la página en cada ancho. En la pestaña Red comprobé
+      que a 390 px se cargó <code>pista-480.webp</code> y a 1280 px se cargó
+      <code>pista-960.webp</code>.</p>
+
+    <p>Prueba a 390 px de ancho.</p>
+    <img src="imagenes/captura-390.png" alt="a390 px "
+         style="max-width: 100%; height: auto;">
+
+    <p>Prueba a 1280 px de ancho.</p>
+    <img src="imagenes/captura-1280.png" alt="a 1280 px "
+         style="max-width: 100%; height: auto;">
+  </main>
+</body>
+</html>

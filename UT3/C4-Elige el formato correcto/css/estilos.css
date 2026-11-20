@@ -154,9 +154,9 @@ button.boton-reservar:hover {
 
 .img-hero {
   width: 100%;
-  height: 400px;        /* Antes era 250px; prueba entre 350px y 450px */
+  height: 400px;        
   object-fit: cover;
-  object-position: center; /* Cambia a 'bottom' si la pista está abajo, o 'top' si está arriba */
+  object-position: center; 
   border-radius: 8px;
   display: block;
 }
@@ -178,7 +178,7 @@ button.boton-reservar:hover {
   transform: scale(1.2);
   opacity: 0.8;
 }
-/* Para la precarga de la página */
+/* Profe para  la precarga de la página añadi esto  */
 .precarga {
   position: fixed;
   top: 0;

@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  background-color: #F4F6F9;
+  color: #1E1E1E;
+  padding-top: 90px;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.cabecera {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #0A192F;
+  color: #F4F6F9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.menu-lateral {
+  float: left;
+  width: 20%;
+  min-height: 600px;
+  padding: 20px 10px;
+}
+
+.menu-lateral ul {
+  list-style: none;
+}
+
+.menu-lateral li {
+  margin-bottom: 15px;
+}
+
+a.enlace-menu {
+  display: block;
+  color: #1E1E1E;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 10px;
+  border: 1px solid #00B4D8;
+  border-radius: 10px;
+}
+
+a.enlace-menu:hover {
+  border: 1px solid #0A192F;
+  color: #0A192F;
+}
+
+.contenido-principal {
+  float: left;
+  width: 80%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "hero"
+    "presentacion"
+    "reserva"
+    "pistas"
+    "puntos";
+  padding: 30px;
+}
+
+.cabecera-reserva {
+  grid-area: reserva;
+  margin-bottom: 25px;
+}
+
+.cabecera-reserva h2 {
+  display: inline-block;
+  font-size: 32px;
+  color: #0A192F;
+}
+
+.aviso-disponible {
+  float: right;
+  background-color: #0A192F;
+  color: #F4F6F9;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.contenedor-pistas {
+  grid-area: pistas;
+  width: 100%;
+}
+
+article.tarjeta-pista {
+  float: left;
+  width: 23%;
+  margin-right: 2%;
+  background-color: #00B4D8;
+  padding: 20px 15px;
+  text-align: center;
+  min-height: 360px;
+}
+
+.hueco-foto {
+  background-color: #0A192F;
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.info-pista {
+  color: #0A192F;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+button.boton-reservar {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #BFFF00;
+  color: #0A192F;
+  border: 1px solid #0A192F;
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+button.boton-reservar:hover {
+  background-color: #F4F6F9;
+}
+
+.puntos-carrusel {
+  grid-area: puntos;
+  clear: both;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.punto {
+  font-size: 20px;
+  color: #0A192F;
+  margin: 0 5px;
+}
+
+.pie {
+  clear: both;
+  background-color: #1E1E1E;
+  color: #F4F6F9;
+  text-align: center;
+  padding: 15px;
+}
+.hero {
+  grid-area: hero;
+  position: relative;
+  margin-bottom: 25px;
+  background: #0A192F url("../recursos/hero-padel.jpg") center / cover;
+}
+
+.hero video {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.hero h2 {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  background-color: #0A192F;
+  color: white;
+  padding: 8px 16px;
+}
+
+.presentacion {
+  grid-area: presentacion;
+  margin-bottom: 25px;
+}
+
+.presentacion h2 {
+  color: #0A192F;
+  margin-bottom: 10px;
+}
+
+.presentacion video {
+  display: block;
+  width: 100%;
+  max-width: 540px;
+  background-color: #0A192F;
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 700px) {
+  .menu-lateral, .contenido-principal {
+    float: none;
+    width: 100%;
+    min-height: 0;
+    padding: 15px;
+  }
+
+  .menu-lateral ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .menu-lateral li { margin-bottom: 0; }
+  .cabecera h1 { font-size: 22px; }
+  .aviso-disponible { float: none; }
+  article.tarjeta-pista { width: 100%; margin: 0 0 15px; }
+}
+
+.redes-sociales {
+  margin-top: 10px;
+}
+
+.icono-red {
+  margin: 0 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.icono-red img {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.icono-red img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+/* Para la precarga de la página */
+.precarga {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0A192F;
+  color: #F4F6F9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  z-index: 2000;
+}
+
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.icono-cargando {
+  animation: girar 1s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero video { visibility: hidden; }
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

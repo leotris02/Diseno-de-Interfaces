@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tu pista a solo un click</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div id="precarga" class="precarga">
+  <img src="recursos/cargando.svg" alt="Cargando pistas" class="icono-cargando">
+  <p>Cargando pistas...</p>
+</div>
+
+  <header class="cabecera">
+  <img src="recursos/logo.svg" alt="Logotipo de Tu pista a solo un click" width="45" height="45">
+  <h1>Tu pista a solo un click</h1>
+</header>
+
+  <nav class="menu-lateral">
+    <ul>
+      <li><a href="#" class="enlace-menu">Perfil</a></li>
+      <li><a href="#" class="enlace-menu">Buscar Pista</a></li>
+      <li><a href="#" class="enlace-menu">Historial Reservas</a></li>
+      <li><a href="#" class="enlace-menu">Ajustes</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenido-principal">
+    <section class="hero">
+      <video autoplay muted loop playsinline poster="recursos/hero-padel.jpg" aria-hidden="true">
+        <source src="video/presentacion.mp4" type="video/mp4">
+        <source src="video/presentacion.webm" type="video/webm">
+      </video>
+      <h2>Conoce nuestras pistas</h2>
+    </section>
+
+    <section class="guia">
+      <h2>Explora las pistas</h2>
+      <div class="opciones">
+        <article class="tarjeta-guia">
+          <img src="recursos/hero-padel.jpg" alt="Partido en una pista de pádel al aire libre">
+          <div>
+            <h3>Al aire libre</h3>
+            <button type="button" class="boton-turnos" aria-controls="turnos-1" aria-expanded="false">Ver horarios</button>
+            <p id="turnos-1" hidden>La pista 1 tiene turno a las 19:30 y la pista 3 a las 20:00.</p>
+          </div>
+        </article>
+        <article class="tarjeta-guia">
+          <img src="recursos/pista-cubierta.jpeg" alt="Pista azul con cubierta">
+          <div>
+            <h3>Bajo cubierta</h3>
+            <button type="button" class="boton-turnos" aria-controls="turnos-2" aria-expanded="false">Ver horarios</button>
+            <p id="turnos-2" hidden>La pista 2 tiene turno a las 20:00 y la pista 4 a las 20:30.</p>
+          </div>
+        </article>
+        <article class="tarjeta-guia">
+          <img src="recursos/pista-azul-red.jpeg" alt="Detalle de la red de pádel">
+          <div>
+            <h3>Junto a la red</h3>
+            <button type="button" class="boton-turnos" aria-controls="turnos-3" aria-expanded="false">Ver horarios</button>
+            <p id="turnos-3" hidden>La pista 4 es techada y tiene turno a las 20:30.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="presentacion">
+      <h2>Vídeo de presentación</h2>
+      <video controls playsinline preload="metadata" poster="recursos/pista-cubierta.jpeg" aria-label="Presentación de las pistas de pádel">
+        <source src="video/presentacion.mp4" type="video/mp4">
+        <source src="video/presentacion.webm" type="video/webm">
+        <a href="video/presentacion.mp4">Descargar el vídeo de presentación</a>
+      </video>
+    </section>
+
+    <section class="cabecera-reserva">
+      <h2>Reserva tu pista</h2>
+      <p class="aviso-disponible">Pistas disponible proximamente</p>
+    </section>
+
+    <section class="contenedor-pistas">
+
+      <article class="tarjeta-pista">
+        <img src="recursos/hero-padel.jpg" alt="Dos jugadores en una pista azul al aire libre" class="hueco-foto">
+        <p class="info-pista">Pista 1 - Aire libre (19:30h)</p>
+        <button type="button" class="boton-reservar">
+          <img src="recursos/sports_tennis.svg" alt="" width="18" height="18">
+          Reservar
+        </button>
+      </article>
+
+      <article class="tarjeta-pista">
+        <img src="recursos/pista-cubierta.jpeg" alt="Vista de una pista azul bajo una cubierta" class="hueco-foto">
+        <p class="info-pista">Pista 2 - Techada (20:00h)</p>
+        <button type="button" class="boton-reservar">
+          <img src="recursos/sports_tennis.svg" alt="" width="18" height="18">
+          Reservar
+        </button>
+      </article>
+
+      <article class="tarjeta-pista">
+        <img src="recursos/juego-en-pista.jpeg" alt="Jugador, pala y pelotas sobre la pista azul" class="hueco-foto">
+        <p class="info-pista">Pista 3 - Aire libre (20:00h)</p>
+        <button type="button" class="boton-reservar">
+          <img src="recursos/sports_tennis.svg" alt="" width="18" height="18">
+          Reservar
+        </button>
+      </article>
+
+      <article class="tarjeta-pista">
+        <img src="recursos/pista-azul-red.jpeg" alt="Red de una pista azul vista de cerca" class="hueco-foto">
+        <p class="info-pista">Pista 4 - Techada (20:30h)</p>
+        <button type="button" class="boton-reservar">
+          <img src="recursos/sports_tennis.svg" alt="" width="18" height="18">
+          Reservar
+        </button>
+      </article>
+
+    </section>
+
+    <section class="puntos-carrusel">
+      <span class="punto">●</span>
+      <span class="punto">●</span>
+      <span class="punto">●</span>
+      <span class="punto">●</span>
+      <span class="punto">●</span>
+    </section>
+
+  </main>
+
+ <footer class="pie">
+  <p>Proyecto Reserva de Pistas de Padel - Leandro Trista DAW 2</p>
+  <div class="redes-sociales">
+    <a href="#" class="icono-red">
+      <img src="recursos/instagram.svg" alt="Instagram" width="24" height="24">
+    </a>
+    <a href="#" class="icono-red">
+      <img src="recursos/x.svg" alt="X" width="24" height="24">
+    </a>
+    <a href="#" class="icono-red">
+      <img src="recursos/whatsapp.svg" alt="WhatsApp" width="24" height="24">
+    </a>
+  </div>
+</footer>
+<script>
+  setTimeout(function() {
+    document.getElementById('precarga').style.display = 'none';
+    document.querySelector('.guia').classList.add('visible');
+  }, 2000);
+
+  document.querySelectorAll('.boton-turnos').forEach(function(boton) {
+    boton.addEventListener('click', function() {
+      const horarios = document.getElementById(boton.getAttribute('aria-controls'));
+      horarios.hidden = !horarios.hidden;
+      boton.setAttribute('aria-expanded', String(!horarios.hidden));
+      boton.textContent = horarios.hidden ? 'Ver horarios' : 'Ocultar horarios';
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tu pista a solo un click</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="cabecera">
+  <img src="recursos/logo.svg" alt="Logotipo de Tu pista a solo un click" width="45" height="45">
+  <h1>Tu pista a solo un click</h1>
+</header>
+
+  <nav class="menu-lateral">
+    <ul>
+      <li><a href="#" class="enlace-menu">Perfil</a></li>
+      <li><a href="#" class="enlace-menu">Buscar Pista</a></li>
+      <li><a href="#" class="enlace-menu">Historial Reservas</a></li>
+      <li><a href="#" class="enlace-menu">Ajustes</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenido-principal">
+    <section class="hero">
+      <video autoplay muted loop playsinline poster="recursos/hero-padel.jpg" aria-hidden="true">
+        <source src="video/presentacion.mp4" type="video/mp4">
+        <source src="video/presentacion.webm" type="video/webm">
+      </video>
+      <h2>Conoce nuestras pistas</h2>
+    </section>
+
+    <section class="destacadas">
+      <h2>Pistas destacadas</h2>
+      <div class="fila-tarjetas">
+        <article class="tarjeta entrada-rapida">
+          <h3>Pista 1 · Aire libre</h3>
+          <p>19:30 h</p>
+          <a class="boton" href="#pista-1">Ver pista 1</a>
+        </article>
+        <article class="tarjeta entrada-suave">
+          <h3>Pista 2 · Techada</h3>
+          <p>20:00 h</p>
+          <a class="boton" href="#pista-2">Ver pista 2</a>
+        </article>
+        <article class="tarjeta entrada-lineal">
+          <h3>Pista 3 · Aire libre</h3>
+          <p>20:00 h</p>
+          <a class="boton" href="#pista-3">Ver pista 3</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="presentacion">
+      <h2>Vídeo de presentación</h2>
+      <video controls playsinline preload="metadata" poster="recursos/pista-cubierta.jpeg" aria-label="Presentación de las pistas de pádel">
+        <source src="video/presentacion.mp4" type="video/mp4">
+        <source src="video/presentacion.webm" type="video/webm">
+        <a href="video/presentacion.mp4">Descargar el vídeo de presentación</a>
+      </video>
+    </section>
+
+    <section class="cabecera-reserva">
+      <h2>Reserva tu pista</h2>
+      <p class="aviso-disponible">Pistas disponible proximamente</p>
+    </section>
+
+    <section class="contenedor-pistas">
+
+      <article id="pista-1" class="tarjeta-pista">
+        <img src="recursos/hero-padel.jpg" alt="Dos jugadores en una pista azul al aire libre" class="hueco-foto">
+        <p class="info-pista">Pista 1 - Aire libre (19:30h)</p>
+        <button type="button" class="boton-reservar">
+          <img src="recursos/sports_tennis.svg" alt="" width="18" height="18">
+          Reservar
+        </button>
+      </article>
+
+      <article id="pista-2" class="tarjeta-pista">
+        <img src="recursos/pista-cubierta.jpeg" alt="Vista de una pista azul bajo una cubierta" class="hueco-foto">
+        <p class="info-pista">Pista 2 - Techada (20:00h)</p>
+        <button type="button" class="boton-reservar">
+          <img src="recursos/sports_tennis.svg" alt="" width="18" height="18">
+          Reservar
+        </button>
+      </article>
+
+      <article id="pista-3" class="tarjeta-pista">
+        <img src="recursos/juego-en-pista.jpeg" alt="Jugador, pala y pelotas sobre la pista azul" class="hueco-foto">
+        <p class="info-pista">Pista 3 - Aire libre (20:00h)</p>
+        <button type="button" class="boton-reservar">
+          <img src="recursos/sports_tennis.svg" alt="" width="18" height="18">
+          Reservar
+        </button>
+      </article>
+
+      <article class="tarjeta-pista">
+        <img src="recursos/pista-azul-red.jpeg" alt="Red de una pista azul vista de cerca" class="hueco-foto">
+        <p class="info-pista">Pista 4 - Techada (20:30h)</p>
+        <button type="button" class="boton-reservar">
+          <img src="recursos/sports_tennis.svg" alt="" width="18" height="18">
+          Reservar
+        </button>
+      </article>
+
+    </section>
+
+    <section class="puntos-carrusel">
+      <span class="punto">●</span>
+      <span class="punto">●</span>
+      <span class="punto">●</span>
+      <span class="punto">●</span>
+      <span class="punto">●</span>
+    </section>
+
+  </main>
+
+ <footer class="pie">
+  <p>Proyecto Reserva de Pistas de Padel - Leandro Trista DAW 2</p>
+  <div class="redes-sociales">
+    <a href="#" class="icono-red">
+      <img src="recursos/instagram.svg" alt="Instagram" width="24" height="24">
+    </a>
+    <a href="#" class="icono-red">
+      <img src="recursos/x.svg" alt="X" width="24" height="24">
+    </a>
+    <a href="#" class="icono-red">
+      <img src="recursos/whatsapp.svg" alt="WhatsApp" width="24" height="24">
+    </a>
+  </div>
+</footer>
+</body>
+</html>

@@ -198,6 +198,12 @@ button.boton-reservar:hover {
   align-items: center;
   gap: 15px;
   z-index: 2000;
+  animation: ocultar-precarga 0.2s ease 1.8s forwards;
+}
+
+@keyframes ocultar-precarga {
+  from { opacity: 1; visibility: visible; }
+  to { opacity: 0; visibility: hidden; }
 }
 
 @keyframes girar {
@@ -210,6 +216,7 @@ button.boton-reservar:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .precarga { display: none; }
   * {
     animation: none !important;
     transition: none !important;

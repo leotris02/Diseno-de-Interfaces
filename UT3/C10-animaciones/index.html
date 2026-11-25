@@ -8,11 +8,6 @@
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-  <div id="precarga" class="precarga">
-  <img src="recursos/cargando.svg" alt="Cargando pistas" class="icono-cargando">
-  <p>Cargando pistas...</p>
-</div>
-
   <header class="cabecera">
   <img src="recursos/logo.svg" alt="Logotipo de Tu pista a solo un click" width="45" height="45">
   <h1>Tu pista a solo un click</h1>
@@ -36,32 +31,23 @@
       <h2>Conoce nuestras pistas</h2>
     </section>
 
-    <section class="guia">
-      <h2>Explora las pistas</h2>
-      <div class="opciones">
-        <article class="tarjeta-guia">
-          <img src="recursos/hero-padel.jpg" alt="Partido en una pista de pádel al aire libre">
-          <div>
-            <h3>Al aire libre</h3>
-            <button type="button" class="boton-turnos" aria-controls="turnos-1" aria-expanded="false">Ver horarios</button>
-            <p id="turnos-1" hidden>La pista 1 tiene turno a las 19:30 y la pista 3 a las 20:00.</p>
-          </div>
+    <section class="destacadas">
+      <h2>Pistas destacadas</h2>
+      <div class="fila-tarjetas">
+        <article class="tarjeta entrada-rapida">
+          <h3>Pista 1 · Aire libre</h3>
+          <p>19:30 h</p>
+          <a class="boton" href="#pista-1">Ver pista 1</a>
         </article>
-        <article class="tarjeta-guia">
-          <img src="recursos/pista-cubierta.jpeg" alt="Pista azul con cubierta">
-          <div>
-            <h3>Bajo cubierta</h3>
-            <button type="button" class="boton-turnos" aria-controls="turnos-2" aria-expanded="false">Ver horarios</button>
-            <p id="turnos-2" hidden>La pista 2 tiene turno a las 20:00 y la pista 4 a las 20:30.</p>
-          </div>
+        <article class="tarjeta entrada-suave">
+          <h3>Pista 2 · Techada</h3>
+          <p>20:00 h</p>
+          <a class="boton" href="#pista-2">Ver pista 2</a>
         </article>
-        <article class="tarjeta-guia">
-          <img src="recursos/pista-azul-red.jpeg" alt="Detalle de la red de pádel">
-          <div>
-            <h3>Junto a la red</h3>
-            <button type="button" class="boton-turnos" aria-controls="turnos-3" aria-expanded="false">Ver horarios</button>
-            <p id="turnos-3" hidden>La pista 4 es techada y tiene turno a las 20:30.</p>
-          </div>
+        <article class="tarjeta entrada-lineal">
+          <h3>Pista 3 · Aire libre</h3>
+          <p>20:00 h</p>
+          <a class="boton" href="#pista-3">Ver pista 3</a>
         </article>
       </div>
     </section>
@@ -82,7 +68,7 @@
 
     <section class="contenedor-pistas">
 
-      <article class="tarjeta-pista">
+      <article id="pista-1" class="tarjeta-pista">
         <img src="recursos/hero-padel.jpg" alt="Dos jugadores en una pista azul al aire libre" class="hueco-foto">
         <p class="info-pista">Pista 1 - Aire libre (19:30h)</p>
         <button type="button" class="boton-reservar">
@@ -91,7 +77,7 @@
         </button>
       </article>
 
-      <article class="tarjeta-pista">
+      <article id="pista-2" class="tarjeta-pista">
         <img src="recursos/pista-cubierta.jpeg" alt="Vista de una pista azul bajo una cubierta" class="hueco-foto">
         <p class="info-pista">Pista 2 - Techada (20:00h)</p>
         <button type="button" class="boton-reservar">
@@ -100,7 +86,7 @@
         </button>
       </article>
 
-      <article class="tarjeta-pista">
+      <article id="pista-3" class="tarjeta-pista">
         <img src="recursos/juego-en-pista.jpeg" alt="Jugador, pala y pelotas sobre la pista azul" class="hueco-foto">
         <p class="info-pista">Pista 3 - Aire libre (20:00h)</p>
         <button type="button" class="boton-reservar">
@@ -144,20 +130,5 @@
     </a>
   </div>
 </footer>
-<script>
-  setTimeout(function() {
-    document.getElementById('precarga').style.display = 'none';
-    document.querySelector('.guia').classList.add('visible');
-  }, 2000);
-
-  document.querySelectorAll('.boton-turnos').forEach(function(boton) {
-    boton.addEventListener('click', function() {
-      const horarios = document.getElementById(boton.getAttribute('aria-controls'));
-      horarios.hidden = !horarios.hidden;
-      boton.setAttribute('aria-expanded', String(!horarios.hidden));
-      boton.textContent = horarios.hidden ? 'Ver horarios' : 'Ocultar horarios';
-    });
-  });
-</script>
 </body>
 </html>

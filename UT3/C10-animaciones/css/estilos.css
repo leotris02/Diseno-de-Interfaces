@@ -67,7 +67,7 @@ a.enlace-menu:hover {
   grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
     "hero"
-    "guia"
+    "destacadas"
     "presentacion"
     "reserva"
     "pistas"
@@ -242,31 +242,58 @@ button.boton-reservar:hover {
   transform: scale(1.2);
   opacity: 0.8;
 }
-/* Para la precarga de la página */
-.precarga {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #0A192F;
-  color: #F4F6F9;
+/* C10: tarjetas con Flexbox y animaciones CSS */
+.destacadas {
+  grid-area: destacadas;
+  margin-bottom: 25px;
+}
+
+.fila-tarjetas {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 15px;
-  z-index: 2000;
+  margin-top: 12px;
 }
 
-@keyframes girar {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.tarjeta {
+  flex: 1 1 200px;
+  padding: 16px;
+  background-color: white;
+  border: 1px solid #00B4D8;
+  border-radius: 10px;
 }
 
-.icono-cargando {
-  animation: girar 1s linear infinite;
+.tarjeta p {
+  margin: 8px 0;
 }
+
+.boton {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #BFFF00;
+  color: #0A192F;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton:hover, .boton:focus-visible {
+  background-color: #DFFF80;
+  box-shadow: 0 3px 8px #999;
+}
+
+.tarjeta-pista {
+  scroll-margin-top: 100px;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.entrada-rapida { animation: aparecer 0.6s ease; }
+.entrada-suave  { animation: aparecer 1.2s ease-in-out; }
+.entrada-lineal { animation: aparecer 1.2s linear; }
 
 @media (prefers-reduced-motion: reduce) {
   .hero video { visibility: hidden; }
@@ -274,54 +301,4 @@ button.boton-reservar:hover {
     animation: none !important;
     transition: none !important;
   }
-}
-.guia { grid-area: guia; margin-bottom: 28px; }
-.guia h2 { margin-bottom: 12px; }
-.opciones {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-}
-.tarjeta-guia {
-  background-color: white;
-  border: 1px solid #ccd6dd;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.tarjeta-guia > img {
-  width: 100%;
-  height: 124px;
-  object-fit: cover;
-  display: block;
-}
-.tarjeta-guia > div { padding: 14px; }
-.tarjeta-guia h3 { color: #0A192F; margin-bottom: 10px; }
-.tarjeta-guia p { margin-top: 10px; }
-.boton-turnos {
-  background-color: #BFFF00;
-  color: #0A192F;
-  border: 1px solid #0A192F;
-  border-radius: 8px;
-  padding: 8px 14px;
-  font: inherit;
-  cursor: pointer;
-}
-.boton-turnos, button.boton-reservar {
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-.boton-turnos:hover, .boton-turnos:focus-visible,
-button.boton-reservar:hover, button.boton-reservar:focus-visible {
-  background-color: #efffbf;
-  box-shadow: 0 4px 9px rgba(10, 25, 47, 0.3);
-}
-@keyframes entrada-tarjeta {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.visible .tarjeta-guia:nth-child(1) { animation: entrada-tarjeta 0.6s ease; }
-.visible .tarjeta-guia:nth-child(2) { animation: entrada-tarjeta 1.2s ease-in-out; }
-.visible .tarjeta-guia:nth-child(3) { animation: entrada-tarjeta 1.2s linear; }
-
-@media (max-width: 700px) {
-  .opciones { grid-template-columns: 1fr; }
 }

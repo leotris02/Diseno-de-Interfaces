@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 16px;
+}
+
+.tarjeta {
+  border: 1px solid #d42409;
+  padding: 12px;
+}
+
+
+details {
+  margin-bottom: 8px;
+}
+
+summary {
+  cursor: pointer;
+  padding: 6px;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  content: "+ ";
+}
+
+details[open] summary::before {
+  content: "− ";
+}
+
+summary:hover {
+  color: #b41d08;
+}

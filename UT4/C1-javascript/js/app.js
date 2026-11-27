@@ -11,7 +11,7 @@ const botonDestacado = document.querySelector("#alternar-destacado");
 tarjetas[0].classList.add("destacado");
 
 botonTitulo.addEventListener("click", function () {
-  titulo.textContent = "Título cambiado con JavaScript";
+  titulo.textContent = "Cambie el título con JavaScript";
 });
 
 botonDestacado.addEventListener("click", function () {

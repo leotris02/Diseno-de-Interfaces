@@ -2,14 +2,14 @@ body {
   font-family: Arial, sans-serif;
   max-width: 600px;
   margin: 30px auto;
-  padding: 0 16px;
+  padding: 16px;
 }
 
 .tarjeta {
-  border: 1px solid #aaa;
+  border: 1px solid #d42409;
   padding: 12px;
 }
 
 .destacado {
-  background-color: lightyellow;
+  background-color: rgb(70, 19, 237);
 }
